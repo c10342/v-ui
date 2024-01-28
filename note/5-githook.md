@@ -28,33 +28,36 @@ npm i husky @commitlint/cli @commitlint/config-conventional cz-conventional-chan
 
 # 初始化
 
-## 初始化 husky
+## 初始化 husky(9.x.x)
 
 ```bash
-npm pkg set scripts.prepare="husky install"
-npm run prepare
+npx husky init
 ```
 
 此时可以在`package.json`文件的`scripts`字段中看见如下内容
 
 ```json
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky"
   }
 ```
 
 ## 添加 hook
 
-commit 前触发
+**pre-commit**
 
-```bash
-npx husky add .husky/pre-commit "npm run lint-staged"
+commit 前触发。在项目根目录新建`.husky\pre-commit`，内容如下
+
+```
+npm run lint-staged
 ```
 
-commit 信息时触发
+**pre-commit**
 
-```bash
-npx husky add .husky/commit-msg "npm run commitlint"
+commit 信息时触发。在项目根目录新建`.husky\commit-msg`，内容如下
+
+```
+npm run commitlint
 ```
 
 ## 添加 script 脚本
@@ -186,7 +189,6 @@ module.exports = {
   }
 }
 ```
-
 
 ## 使用
 

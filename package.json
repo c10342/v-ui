@@ -7,7 +7,11 @@
     "lint": "eslint --ext .js,.vue,.jsx,.ts,.tsx ./",
     "lint-fix": "eslint --fix --ext .js,.vue,.jsx,.ts,.tsx ./",
     "lint:style": "stylelint **/*.{css,scss}",
-    "lint:style-fix": "stylelint **/*.{css,scss} --fix"
+    "lint:style-fix": "stylelint **/*.{css,scss} --fix",
+    "prepare": "husky",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "lint-staged": "lint-staged --config lint-staged.config.js",
+    "commit": "git cz"
   },
   "keywords": [],
   "author": "",
