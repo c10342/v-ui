@@ -9,18 +9,18 @@ module.exports = defineConfig({
     parser: "@typescript-eslint/parser",
     ecmaFeatures: {
       jsx: true,
-      tsx: true,
-    },
+      tsx: true
+    }
   },
   env: {
     node: true,
-    browser: true,
+    browser: true
   },
   extends: [
     "airbnb-base",
     "plugin:vue/vue3-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
   ],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -64,6 +64,6 @@ module.exports = defineConfig({
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/no-this-alias": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-  },
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 });
