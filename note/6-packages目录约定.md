@@ -73,3 +73,21 @@ hooks代码
 # index.ts
 
 组件库入口文件
+
+# 路径别名
+
+**@components/\*** 表示引用`packages\components`下的组件。如：
+
+引用`Button`组件
+
+```javascript
+import Button from "@components/button";
+```
+
+**@packages/\*** 表示引用`packages`下的文件。如：
+
+使用`withInstall`函数
+
+```javascript
+import { withInstall } from "@packages/utils";
+```
