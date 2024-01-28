@@ -26,9 +26,7 @@ git commit -m "update"
 npm i husky @commitlint/cli @commitlint/config-conventional cz-conventional-changelog lint-staged -D
 ```
 
-# 初始化
-
-## 初始化 husky(9.x.x)
+# 初始化 husky(9.x.x)
 
 ```bash
 npx husky init
@@ -42,7 +40,7 @@ npx husky init
   }
 ```
 
-## 添加 hook
+# 添加 hook
 
 **pre-commit**
 
@@ -60,7 +58,7 @@ commit 信息时触发。在项目根目录新建`.husky\commit-msg`，内容如
 npm run commitlint
 ```
 
-## 添加 script 脚本
+# 添加 script 脚本
 
 在`package.json`文件的`scripts`字段中添加如下内容
 
@@ -75,7 +73,7 @@ npm run commitlint
 
 **lint-staged** 检查暂缓区的代码是否符合规范
 
-## commitlint.config.js
+# commitlint.config.js
 
 在项目根目录添加`commitlint.config.js`文件，内容如下
 
@@ -105,7 +103,7 @@ module.exports = {
 };
 ```
 
-## lint-staged.config.js
+# lint-staged.config.js
 
 在项目根目录添加`commitlint.config.js`文件，内容如下
 
