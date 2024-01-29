@@ -1,4 +1,4 @@
 import { withInstall } from "@packages/utils";
-import Button from "./src/index.vue";
+import VTag from "./src/index.vue";
 
-export default withInstall(Button);
+export default withInstall(VTag);

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="v-tag">
     tag
     <v-button></v-button>
   </div>
@@ -8,5 +8,11 @@
 <script lang="ts" setup>
 import VButton from "@packages/components";
 
-defineOptions({ name: "VButton" });
+defineOptions({ name: "VTag" });
 </script>
+
+<style lang="scss">
+.v-tag {
+  background-color: yellow;
+}
+</style>
