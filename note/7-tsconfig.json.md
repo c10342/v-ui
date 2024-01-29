@@ -12,9 +12,9 @@
 {
   "compilerOptions": {
     "module": "ESNext", // 指定要使用的模板标准
-    "declaration": false,
+    "declaration": false, // 输出类型声明文件
     "noImplicitAny": false, // 不允许变量或函数参数具有隐式any类型
-    "removeComments": true,
+    "removeComments": true, // 移除注释
     "moduleResolution": "node", //用于选择模块解析策略，有'node'和'classic'两种类型
     "esModuleInterop": true, //为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性
     "target": "es6", // 指定编译后的ECMAScript版本
