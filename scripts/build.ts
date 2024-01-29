@@ -30,9 +30,6 @@ const getDep = () => {
 };
 
 export default defineConfig({
-  //   css: {
-  //     extract: false
-  //   },
   build: {
     rollupOptions: {
       external: getDep(),
@@ -65,7 +62,8 @@ export default defineConfig({
     lib: {
       entry: input,
       name: "dist"
-    }
+    },
+    cssCodeSplit: false
   },
   plugins: [
     vue(),

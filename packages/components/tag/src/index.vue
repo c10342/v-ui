@@ -10,9 +10,3 @@ import VButton from "@packages/components";
 
 defineOptions({ name: "VTag" });
 </script>
-
-<style lang="scss">
-.v-tag {
-  background-color: yellow;
-}
-</style>
