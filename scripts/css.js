@@ -1,15 +1,3 @@
-# 安装依赖
-
-```bash
-npm i sass gulp gulp-cssmin gulp-autoprefixer@8.0.0 gulp-sass -D
-```
-
-
-# 配置
-
-在`scripts`目录新建`css.js`文件，内容如下：
-
-```javascript
 const gulp = require("gulp");
 const cssmin = require("gulp-cssmin");
 const autoPrefixer = require("gulp-autoprefixer");
@@ -25,17 +13,3 @@ const buildSass = () =>
     .pipe(gulp.dest(resolve(__dirname, "../dist/theme-chalk"))); // 5.放到指定目录
 
 exports.default = buildSass;
-
-```
-
-# 脚本命令
-
-在`package.json`文件的`scripts`字段中写入如下脚本
-
-```json
-{
-  "scripts": {
-    "build:css": "gulp -f scripts/css.js"
-  }
-}
-```
