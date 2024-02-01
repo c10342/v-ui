@@ -32,7 +32,9 @@ const getDep = () => {
 export default defineConfig({
   build: {
     rollupOptions: {
+      // 打包的时候排除掉package.json中的依赖
       external: getDep(),
+      // 入口文件
       input,
       output: [
         {
@@ -59,15 +61,17 @@ export default defineConfig({
         }
       ]
     },
+    // 构建为库
     lib: {
       entry: input,
-      name: "dist"
-    },
-    cssCodeSplit: false
+      // 暴露的全局变量
+      name: "vUi"
+    }
   },
   plugins: [
     vue(),
     vueJsx(),
+    // 生成类型声明文件
     dts({
       entryRoot: resolvePack(),
       outDir: [resolveDist("./types")],
@@ -76,6 +80,7 @@ export default defineConfig({
     })
   ],
   resolve: {
+    // 路径别名
     alias: [
       {
         find: "@packages",
