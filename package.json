@@ -14,7 +14,10 @@
     "commit": "git cz",
     "build:js": "vite build --config scripts/build.ts",
     "build:css": "gulp -f scripts/css.js",
-    "build": "rimraf dist && npm run build:js && npm run build:css"
+    "build": "rimraf dist && npm run build:js && npm run build:css",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",
@@ -52,6 +55,7 @@
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-plugin-dts": "^3.7.2",
+    "vitepress": "^1.0.0-rc.41",
     "vue": "^3.4.15",
     "vue-eslint-parser": "^9.4.2"
   },

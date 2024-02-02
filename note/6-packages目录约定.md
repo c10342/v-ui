@@ -84,10 +84,10 @@ hooks代码
 import Button from "@components/button";
 ```
 
-**@packages/\*** 表示引用`packages`下的文件。如：
+**v-ui** 表示引用`packages/index.ts`文件。如：
 
 使用`withInstall`函数
 
 ```javascript
-import { withInstall } from "@packages/utils";
+import { withInstall } from "v-ui";
 ```

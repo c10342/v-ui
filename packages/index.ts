@@ -1,4 +1,7 @@
-export { default as vui } from "./components";
+import vui from "./components";
+
+export default vui;
+
 export * from "./components";
 export * from "./hooks";
 export * from "./locale";

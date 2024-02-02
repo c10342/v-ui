@@ -20,8 +20,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@packages/*": [
-        "packages/*"
+      "v-ui": [
+        "packages/index"
       ]
     }
   },
