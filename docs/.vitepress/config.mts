@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import path from "path";
+import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -41,10 +42,16 @@ export default defineConfig({
       // 路径别名
       alias: [
         {
-          find: "v-ui",
-          replacement: path.resolve(__dirname, "../../packages/index.ts")
+          find: "@packages",
+          replacement: path.resolve(__dirname, "../../packages")
         }
       ]
     }
   },
+  markdown: {
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
+    }
+  }
 });

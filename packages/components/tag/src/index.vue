@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VButton } from "v-ui";
+import { VButton } from "@packages/components";
 
 defineOptions({ name: "VTag" });
 </script>

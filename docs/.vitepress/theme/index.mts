@@ -1,13 +1,17 @@
-import { Theme } from "vitepress"
+import { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import vui from 'v-ui'
+// @ts-ignore
+import vui from "@packages/index";
+import { ElementPlusContainer } from "@vitepress-demo-preview/component";
+import "@vitepress-demo-preview/component/dist/style.css";
+import "@packages/theme-chalk/index.scss";
 
-const theme:Theme = {
-    ...DefaultTheme,
-    enhanceApp({app}) {
-        app.use(vui)
-        // app.component('demo', demo)
-    },
-}
+const theme: Theme = {
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.use(vui);
+    app.component("demo-preview", ElementPlusContainer);
+  }
+};
 
-export default theme
+export default theme;

@@ -29,7 +29,7 @@
     "baseUrl": ".", // 用于设置解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
     "paths": {
       // 用于设置模块名到基于baseUrl的路径映射
-      "v-ui": ["packages/index"]
+      "@packages": ["packages/*"]
     }
     // "types": [], // 用来指定需要包含的模块，只有在这里列出的模块声明文件才会被加载进来
     // "jsx": "preserve", // 指定jsx代码用于的开发环境
