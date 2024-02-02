@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 import path from "path";
-import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -26,11 +25,11 @@ export default defineConfig({
         { text: "表单组件", items: [] },
         {
           text: "数据展示",
-          items: [{ text: "Tag 标签", link: '/components/tag' }]
+          items: [{ text: "Tag 标签", link: "/components/tag" }]
         },
         { text: "导航", items: [] },
         { text: "反馈组件", items: [] },
-        { text: "其他", items: [] },
+        { text: "其他", items: [] }
       ]
     },
     socialLinks: [
@@ -46,12 +45,6 @@ export default defineConfig({
           replacement: path.resolve(__dirname, "../../packages")
         }
       ]
-    }
-  },
-  markdown: {
-    config(md) {
-      md.use(containerPreview)
-      md.use(componentPreview)
     }
   }
 });
