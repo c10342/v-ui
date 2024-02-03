@@ -17,7 +17,9 @@
     "build": "rimraf dist && npm run build:js && npm run build:css",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "test": "vitest --config scripts/vitest.ts",
+    "coverage": "vitest run --coverage  --config scripts/vitest.ts"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +31,8 @@
     "@typescript-eslint/parser": "^6.19.1",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vitest/coverage-v8": "^1.2.2",
+    "@vue/test-utils": "^2.4.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -41,6 +45,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^5.1.0",
+    "happy-dom": "^13.3.8",
     "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.4",
@@ -56,6 +61,7 @@
     "vite": "^5.0.12",
     "vite-plugin-dts": "^3.7.2",
     "vitepress": "^1.0.0-rc.41",
+    "vitest": "^1.2.2",
     "vue": "^3.4.15",
     "vue-eslint-parser": "^9.4.2"
   },

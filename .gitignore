@@ -25,3 +25,5 @@ components.d.ts
 auto-imports.d.ts
 
 docs/.vitepress/cache
+
+coverage
