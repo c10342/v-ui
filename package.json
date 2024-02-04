@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ext .js,.vue,.jsx,.ts,.tsx ./",
-    "lint-fix": "eslint --fix --ext .js,.vue,.jsx,.ts,.tsx ./",
+    "lint": "eslint --ext .js,.vue,.jsx,.ts,.tsx,.mts ./",
+    "lint-fix": "eslint --fix --ext .js,.vue,.jsx,.ts,.tsx,.mts ./",
     "lint:style": "stylelint **/*.{css,scss}",
     "lint:style-fix": "stylelint **/*.{css,scss} --fix",
     "prepare": "husky",
