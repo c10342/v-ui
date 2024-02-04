@@ -1,5 +1,9 @@
 import { defineConfig } from "vitepress";
 import path from "path";
+import {
+  demoblockPlugin,
+  demoblockVitePlugin
+} from "vitepress-theme-demoblock";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -45,6 +49,12 @@ export default defineConfig({
           replacement: path.resolve(__dirname, "../../packages")
         }
       ]
+    },
+    plugins: [demoblockVitePlugin()]
+  },
+  markdown: {
+    config: (md) => {
+      md.use(demoblockPlugin);
     }
   }
 });
