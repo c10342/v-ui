@@ -1,19 +1,11 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig, mergeConfig } from "vite";
 import dts from "vite-plugin-dts";
-import vueJsx from "@vitejs/plugin-vue-jsx";
 import path from "path";
 import pck from "../package.json";
+import { config, resolvePack, resolveRoot } from "./utils";
 
 const resolveDist = (...args: any) => {
   return path.resolve(__dirname, "../dist", ...args);
-};
-
-const resolvePack = (...args: any) => {
-  return path.resolve(__dirname, "../packages", ...args);
-};
-const resolveRoot = (...args: any) => {
-  return path.resolve(__dirname, "../", ...args);
 };
 
 const input = resolvePack("index.ts");
@@ -29,7 +21,7 @@ const getDep = () => {
   ];
 };
 
-export default defineConfig({
+const buildConfig = defineConfig({
   build: {
     rollupOptions: {
       // 打包的时候排除掉package.json中的依赖
@@ -69,8 +61,6 @@ export default defineConfig({
     }
   },
   plugins: [
-    vue(),
-    vueJsx(),
     // 生成类型声明文件
     dts({
       entryRoot: resolvePack(),
@@ -78,14 +68,7 @@ export default defineConfig({
       // 指定使用的tsconfig.json为我们整个项目根目录下
       tsconfigPath: resolveRoot("./tsconfig.json")
     })
-  ],
-  resolve: {
-    // 路径别名
-    alias: [
-      {
-        find: "@packages",
-        replacement: resolvePack()
-      }
-    ]
-  }
+  ]
 });
+
+export default mergeConfig(config, buildConfig);

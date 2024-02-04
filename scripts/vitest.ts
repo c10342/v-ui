@@ -1,14 +1,7 @@
-import { defineConfig } from "vitest/config";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import path from "path";
+import { defineConfig, mergeConfig } from "vitest/config";
+import { config } from "./utils";
 
-const resolvePack = (...args: any) => {
-  return path.resolve(__dirname, "../packages", ...args);
-};
-
-export default defineConfig({
-  plugins: [vue(), vueJsx()],
+const testConfig = defineConfig({
   test: {
     // 运行环境
     environment: "happy-dom",
@@ -24,13 +17,7 @@ export default defineConfig({
         "packages/types/**"
       ]
     }
-  },
-  resolve: {
-    alias: [
-      {
-        find: "@packages",
-        replacement: resolvePack()
-      }
-    ]
   }
 });
+
+export default mergeConfig(config, testConfig);
